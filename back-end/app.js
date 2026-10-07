@@ -78,5 +78,19 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+//---ASSIGNMENT CODE---
+app.get('/api/about', async (req, res) => {
+  res.status(200).json({
+    name: 'Ryan Gao',
+    paragraphs: [
+      'I am a student at NYU University.',
+      'I am a student majoring in Computer Science + Game Design.',
+      'I make games!'
+    ],
+    image: '/image.png',
+  })
+})
+
+
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
